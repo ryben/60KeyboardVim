@@ -110,7 +110,7 @@ CapsLock & a::MouseMove, % GetKeyState("Alt", "P") ? -150 : -20, 0, 0, R
 CapsLock & s::MouseMove, 0, % GetKeyState("Alt", "P") ? 150 : 20, 0, R
 CapsLock & d::MouseMove, % GetKeyState("Alt", "P") ? 150 : 20, 0, 0, R
 
-Capslock & u::Send, {LButton Down}
-Capslock & u up::Send, {LButton Up}
-Capslock & o::MouseClick, right
-Capslock & i::MouseClick, middle
+Capslock & n::Send, {LButton Down}
+Capslock & n up::Send, {LButton Up}
+Capslock & m::MouseClick, right
+Capslock & b::MouseClick, middle
