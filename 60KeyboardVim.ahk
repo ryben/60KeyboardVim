@@ -102,7 +102,7 @@ Capslock & / up::Send {Blind}{Del Up}
 
 
 
-; Mouse Movement, Click, Drag
+; Mouse Movement, Click, Drag, Scroll
 
 
 CapsLock & w::MouseMove, 0, % GetKeyState("Alt", "P") ? -150 : -20, 0, R
@@ -114,3 +114,12 @@ Capslock & n::Send, {LButton Down}
 Capslock & n up::Send, {LButton Up}
 Capslock & m::MouseClick, right
 Capslock & b::MouseClick, middle
+
+Capslock & u::Send, {WheelDown 1}
+Capslock & i::Send, {WheelUp 1}
+
+
+
+; Full Screen
+
+Capslock & enter::Send, {F11}
