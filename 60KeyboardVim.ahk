@@ -100,3 +100,17 @@ Capslock & . up::Send {Blind}{Ins Up}
 Capslock & /::Send {Blind}{Del DownTemp}
 Capslock & / up::Send {Blind}{Del Up}
 
+
+
+; Mouse Movement and Click
+
+
+
+Capslock & w::MouseMove, 0,   -25, 0, R
+Capslock & a::MouseMove, -50,   0, 0, R
+Capslock & s::MouseMove, 0,    25, 0, R
+Capslock & d::MouseMove, 50,    0, 0, R
+
+Capslock & n::MouseClick, left
+Capslock & m::MouseClick, right
+Capslock & ,::MouseClick, middle
