@@ -102,15 +102,15 @@ Capslock & / up::Send {Blind}{Del Up}
 
 
 
-; Mouse Movement and Click
+; Mouse Movement, Click, Drag
 
 
+CapsLock & w::MouseMove, 0, % GetKeyState("Alt", "P") ? -150 : -20, 0, R
+CapsLock & a::MouseMove, % GetKeyState("Alt", "P") ? -150 : -20, 0, 0, R
+CapsLock & s::MouseMove, 0, % GetKeyState("Alt", "P") ? 150 : 20, 0, R
+CapsLock & d::MouseMove, % GetKeyState("Alt", "P") ? 150 : 20, 0, 0, R
 
-Capslock & w::MouseMove, 0,   -25, 0, R
-Capslock & a::MouseMove, -50,   0, 0, R
-Capslock & s::MouseMove, 0,    25, 0, R
-Capslock & d::MouseMove, 50,    0, 0, R
-
-Capslock & n::MouseClick, left
-Capslock & m::MouseClick, right
-Capslock & ,::MouseClick, middle
+Capslock & u::Send, {LButton Down}
+Capslock & u up::Send, {LButton Up}
+Capslock & o::MouseClick, right
+Capslock & i::MouseClick, middle
