@@ -133,6 +133,7 @@ Capslock & b::MouseClick, middle
 Capslock & u::Send, {WheelDown 1}
 Capslock & i::Send, {WheelUp 1}
 
+Capslock & x::Send, {Delete}
 
 
 ; Full Screen
