@@ -46,17 +46,54 @@ SetCapsLockState, AlwaysOff
 
 ; Vim Arrow keys
 
-Capslock & h::Send {Blind}{Left DownTemp}
+;Capslock & h::Send {Blind}{Left DownTemp}
 Capslock & h up::Send {Blind}{Left Up}
 
-Capslock & j::Send {Blind}{Down DownTemp}
+;Capslock & j::Send {Blind}{Down DownTemp}
 Capslock & j up::Send {Blind}{Down Up}
 
-Capslock & k::Send {Blind}{Up DownTemp}
+;Capslock & k::Send {Blind}{Up DownTemp}
 Capslock & k up::Send {Blind}{Up Up}
 
-Capslock & l::Send {Blind}{Right DownTemp}
+;Capslock & l::Send {Blind}{Right DownTemp}
 Capslock & l up::Send {Blind}{Right Up}
+
+
+
+
+
+CapsLock & k::
+	if GetKeyState("Alt", "D")
+		MouseMove, 0, % GetKeyState("Shift", "P") ? -150 : -20, 0, R
+	else
+		Send {Blind}{Up DownTemp}
+	return
+
+CapsLock & h::
+	if GetKeyState("Alt", "D")
+		MouseMove, % GetKeyState("Shift", "P") ? -150 : -20, 0, 0, R
+	else
+		Send {Blind}{Left DownTemp}
+	return
+
+CapsLock & j::
+	if GetKeyState("Alt", "D")
+		MouseMove, 0, % GetKeyState("Shift", "P") ? 150 : 20, 0, R
+	else
+		Send {Blind}{Down DownTemp}
+	return
+
+CapsLock & l::
+	if GetKeyState("Alt", "D")
+		MouseMove, % GetKeyState("Shift", "P") ? 150 : 20, 0, 0, R
+	else
+		Send {Blind}{Right DownTemp}
+	return
+
+
+
+
+
 
 
 
@@ -101,20 +138,6 @@ Capslock & /::Send {Blind}{Del DownTemp}
 Capslock & / up::Send {Blind}{Del Up}
 
 
-
-; Function Keys
-CapsLock & 1:: Send {F1}
-CapsLock & 2:: Send {F2}
-CapsLock & 3:: Send {F3}
-CapsLock & 4:: Send {F4}
-CapsLock & 5:: Send {F5}
-CapsLock & 6:: Send {F6}
-CapsLock & 7:: Send {F7}
-CapsLock & 8:: Send {F8}
-CapsLock & 9:: Send {F9}
-CapsLock & 0:: Send {F10}
-CapsLock & -:: Send {F11}
-CapsLock & +:: Send {F12}
 
 
 ; Mouse Movement, Click, Drag, Scroll
